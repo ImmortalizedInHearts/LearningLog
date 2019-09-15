@@ -22,4 +22,4 @@ class Entry(models.Model):
 
     def __str__(self):
         """Returns string model view"""
-        return self.text[:50] + "..."
+        return self.text[:50] + "..." if len(self.text) > 50 else self.text
